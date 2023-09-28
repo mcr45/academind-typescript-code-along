@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class ServersComponent {
 allowNewServers=false
 serverStatus='Well,there is nothing here.....what if....you click that button right there'
-serverName=''
+serverName='Now I am  here'
 
 
 

@@ -5,8 +5,14 @@
     <div class="col-md-4"><app-warning></app-warning></div><div class="col-md-2"><app-success></app-success></div>
   </div>
   <div class="row">
-    <button class="btn btn-primary" [disabled]="!allowNewServers" >Add server</button>
+    <p>{{serverStatus}}</p>
+    <button class="btn btn-primary" [disabled]="!allowNewServers" (click)="onCreateServer()">Add server</button>
 
+  </div>
+  <div class="row">
+    <label for="">Server name</label>
+    <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
   </div>
 </div>
 

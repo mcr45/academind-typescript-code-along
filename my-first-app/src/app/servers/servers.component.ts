@@ -9,6 +9,7 @@ export class ServersComponent {
 allowNewServers=false
 serverStatus='Well,there is nothing here.....what if....you click that button right there'
 serverName='Now I am  here'
+userName=""
 
 
 
@@ -22,4 +23,10 @@ onCreateServer(){
 onUpdateServerName(event:Event){
   this.serverName=(<HTMLInputElement>event.target).value
 }
+
+onResetName(){
+  this.userName=""
+}
+
+
 }

@@ -18,5 +18,13 @@
 
 <p>{{serverName}}</p>
   </div>
+  <div class="row mb-5" >
+<p>This is {{userName}}</p>
+<label >Oh nana, what's your username</label>
+<input type="text" class="form-control"  [(ngModel)]="userName" >
+  </div>
+  <div class="row">
+    <button class="btn-danger" [disabled]="userName? false:true" (click)="onResetName()">Reset</button>
+  </div>
 </div>
 

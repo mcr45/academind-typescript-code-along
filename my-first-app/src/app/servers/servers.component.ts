@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class ServersComponent {
 allowNewServers=false
 serverStatus='Well,there is nothing here.....what if....you click that button right there'
-serverName='Now I am  here'
+serverName=''
 userName=""
-
+serverCreated=false
+servers=['amazon','google']
 
 
 constructor(){
@@ -19,6 +20,8 @@ constructor(){
 
 onCreateServer(){
   this.serverStatus='OOOOOOHHHHHH YEEEEEAH, you just created me.Now I will take over the world'
+  this.serverCreated=true
+  this.servers.push(this.serverName)
 }
 onUpdateServerName(event:Event){
   this.serverName=(<HTMLInputElement>event.target).value

@@ -2,7 +2,7 @@
 <app-server></app-server>
 <div class="container">
   <div class="row">
-    <div class="col-md-4"><app-warning></app-warning></div><div class="col-md-2"><app-success></app-success></div>
+    <div class="col-md-4"><app-warning *ngFor="let serv of servers"></app-warning></div>
   </div>
   <div class="row">
     <p>{{serverStatus}}</p>
@@ -16,10 +16,13 @@
     <input type="text" class="form-control" [(ngModel)]="serverName">
 
 
-<p>{{serverName}}</p>
+<p *ngIf="serverCreated; else noServer" >this is {{serverName}}</p>
+<ng-template #noServer>
+  <p>There's nothing here, why?!</p>
+</ng-template>
   </div>
   <div class="row mb-5" >
-<p>This is {{userName}}</p>
+<p >This is {{userName}}</p>
 <label >Oh nana, what's your username</label>
 <input type="text" class="form-control"  [(ngModel)]="userName" >
   </div>

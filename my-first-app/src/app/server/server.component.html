@@ -6,6 +6,8 @@
 <p *ngIf="showtime"> What am I supposed to do if the best part of me was always you</p>
 <div class="container">
   <div class="row" >
-    <div class="col-md-3 col-sm-5 mb-5"  *ngFor="let secrets of scusisadirmilora"><p [ngStyle]="{backgroundColor:bgcolor}" [ngClass]="{sowhite:getBlue()}">Sono le {{getDate()}} <br>It is {{getDate()}}, time to sleep</p> </div>
+    <div class="col-md-3 col-sm-5 mb-5"  *ngFor="let secrets of scusisadirmilora; let i=index"><p [ngStyle]="{backgroundColor: i>4? 'blue': 'transparent'}" [ngClass]="{sowhite:getBlue()}">Sono le {{getDate()}} <br>It is {{getDate()}}, time to sleep</p> </div>
   </div>
+  <div class="row"></div>
 </div>
+
